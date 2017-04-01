@@ -1,0 +1,7 @@
+{
+    "clientId": "devops-illuminate",
+    "broker": "ssl://XXXXXXXXXXXXX.iot.us-east-1.amazonaws.com:8883",
+    "rootCA": "root-CA.pem.crt",
+    "certificate": "certificate.pem.crt",
+    "privateKey": "private.pem.key"
+}

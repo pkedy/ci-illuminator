@@ -1,0 +1,32 @@
+hash: adb33b7a22c1a25d1f236f7f17e6286ffc4f0ee06066c07ec908bfde6f9009f9
+updated: 2017-04-01T15:47:02.734274085-04:00
+imports:
+- name: github.com/2tvenom/golifx
+  version: 56319865d6210104a5e60e3d706c3b216ced8a81
+- name: github.com/eclipse/paho.mqtt.golang
+  version: 45f9b18f4864c81d49c3ed01e5faec9eeb05de31
+  subpackages:
+  - packets
+- name: github.com/lunixbochs/struc
+  version: ae5aa8161e35c822b55526833b1635764b740770
+- name: github.com/pdf/golifx
+  version: 4ee2b5d88428ab591907d9498283dc9a7eab3e92
+  subpackages:
+  - common
+  - protocol
+  - protocol/v2/device
+  - protocol/v2/packet
+  - protocol/v2/shared
+- name: github.com/satori/go.uuid
+  version: 6b8e5b55d20d01ad47ecfe98e5171688397c61e9
+- name: github.com/Sirupsen/logrus
+  version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
+- name: golang.org/x/net
+  version: ffcf1bedda3b04ebb15a168a59800a73d6dc0f4d
+  subpackages:
+  - websocket
+- name: golang.org/x/sys
+  version: 9a7256cb28ed514b4e1e5f68959914c4c28a92e0
+  subpackages:
+  - unix
+testImports: []
