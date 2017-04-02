@@ -4,7 +4,8 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"io/ioutil"
-	"log"
+
+	log "github.com/Sirupsen/logrus"
 
 	MQTT "github.com/eclipse/paho.mqtt.golang"
 )
@@ -27,6 +28,13 @@ func ConnectMQTT(config *MQTTConfig) MQTT.Client {
 	}
 	opts.AddBroker(config.Broker)
 	opts.SetAutoReconnect(true)
+	opts.OnConnect = func(client MQTT.Client) {
+		log.Info("Connected!")
+	}
+	opts.OnConnectionLost = func(client MQTT.Client, err error) {
+		log.Errorf("Connection lost: %s", err)
+		client.Connect()
+	}
 
 	return MQTT.NewClient(opts)
 }
